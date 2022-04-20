@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "erp-sd",
     "public": "dist/erp-sd",
     "ignore": [
       "firebase.json",
