@@ -22,7 +22,7 @@ import { AuthGuard } from './auth/auth.guard';
         {
           path: 'dashboard',
           children: dashboardRoutes,
-          canActivate: [AuthGuard],
+          //canActivate: [AuthGuard],
         },
         { path: '', children: accessRoutes },
         { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
