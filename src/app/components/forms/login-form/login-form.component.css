@@ -2,6 +2,7 @@ mat-card {
   max-width: 90%;
   margin: 10% auto;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.842);
 }
 
 mat-card-title {
