@@ -4,16 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint: 'https://localhost:3000/',
-  firebaseConfig: {
-    apiKey: "AIzaSyC2k8skQlyZRQid5ZruliJsO0N0Ba1rhGA",
-    authDomain: "sistema-dedicado-digital.firebaseapp.com",
-    projectId: "sistema-dedicado-digital",
-    storageBucket: "sistema-dedicado-digital.appspot.com",
-    messagingSenderId: "504454492089",
-    appId: "1:504454492089:web:f31d866f86206715af9068",
-    measurementId: "G-57K4B6C66B"
-  }
+  endpoint: ''
 };
 
 /*
