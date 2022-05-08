@@ -1,1 +1,46 @@
-<p>login-form works!</p>
+<form class="m-auto space-y-6">
+  <input type="hidden" name="remember" value="true">
+  <div class="relative">
+    <div class="absolute right-3 mt-4">
+    </div>
+    <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">E-Mail</label>
+    <input
+      class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+      type="email" placeholder="seu@email.com" required>
+  </div>
+  <div class="mt-8 content-center">
+    <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+      Senha
+    </label>
+    <input
+      class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
+      type="password" placeholder="*********" required>
+  </div>
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <input id="remember_me" name="remember_me" type="checkbox"
+        class="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded">
+      <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+        Lembrar-me
+      </label>
+    </div>
+    <div class="text-sm">
+      <a href="#" class="text-indigo-400 hover:text-blue-500">
+        Esqueceu a Senha?
+      </a>
+    </div>
+  </div>
+  <div class="pt-4">
+    <button type="submit"
+      class="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+      ACESSAR
+    </button>
+  </div>
+  <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
+    <span>Ainda não possui uma conta?</span>
+    <a href="https://suporte.dedicado.digital/"
+      class="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">
+      Contate o Suporte
+    </a>
+  </p>
+</form>
