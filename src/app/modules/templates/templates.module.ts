@@ -3,8 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LoginFormComponent } from '../../components/templates/forms/login-form/login-form.component';
 import { HeaderComponent } from '../../components/templates/header/header.component';
 import { FooterComponent } from '../../components/templates/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 
-
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 @NgModule({
   declarations: [
@@ -13,7 +19,10 @@ import { FooterComponent } from '../../components/templates/footer/footer.compon
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   exports: [
     LoginFormComponent,
