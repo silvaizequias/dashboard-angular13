@@ -32,7 +32,7 @@ export class AuthService {
         localStorage.setItem('access_token', res.token);
         this.getUserProfile(res._id).subscribe((res) => {
           this.currentUser = res;
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/']);
           //this.router.navigate(['/' + res.msg._id]);
         });
       });
@@ -50,7 +50,7 @@ export class AuthService {
   SignOut() {
     let removeToken = localStorage.removeItem('access_token');
     if (removeToken == null) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
   }
 

@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from 'src/app/auth/auth.interceptor';
 import { TemplatesModule } from '../templates/templates.module';
 import { ErrorPageComponent } from '../../components/pages/error-page/error-page.component';
+import { AuthGuard } from 'src/app/auth/auth.guard';
 
 export const pagesRoutes: Route[] = [
-  { path: '', component: MainPageComponent },
+  { path: '', component: MainPageComponent, canActivate: [AuthGuard] },
   { path: 'error', component: ErrorPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: '**', redirectTo: 'error', pathMatch: 'full' }
