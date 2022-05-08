@@ -7,8 +7,7 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { MaterialDesignService } from '../libraries/material-design/material-design.service';
-import { AuthService } from './auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +15,6 @@ import { AuthService } from './auth.service';
 export class AuthGuard implements CanActivate {
   constructor(
     public readonly authService: AuthService,
-    public readonly materialDesignService: MaterialDesignService,
     public readonly router: Router
   ) {}
 
@@ -29,7 +27,6 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     if (this.authService.isLoggedIn !== true) {
-      this.materialDesignService.showMessage('Acesso Não Autorizado!');
       this.router.navigate(['/']);
     }
     return true;
