@@ -1,10 +1,10 @@
-<form class="m-auto space-y-6">
+<form class="m-auto space-y-6" [formGroup]="formLogin" (ngSubmit)="login()">
   <input type="hidden" name="remember" value="true">
   <div class="relative">
     <div class="absolute right-3 mt-4">
     </div>
     <label class="ml-3 text-sm font-bold text-blue-400 tracking-wide">E-Mail</label>
-    <input
+    <input formControlName="email"
       class=" w-full text-base px-4 py-2 border-b border-blue-300 focus:outline-none rounded-2xl focus:border-blue-500"
       type="email" placeholder="seu@email.com" required>
   </div>
@@ -12,7 +12,7 @@
     <label class="ml-3 text-sm font-bold text-blue-400 tracking-wide">
       Senha
     </label>
-    <input
+    <input formControlName="password"
       class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-blue-300 focus:outline-none focus:border-blue-500"
       type="password" placeholder="*********" required>
   </div>

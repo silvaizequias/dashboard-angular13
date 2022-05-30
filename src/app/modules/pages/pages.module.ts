@@ -19,25 +19,22 @@ export const pagesRoutes: Route[] = [
 ]
 
 @NgModule({
-  declarations: [
-    LoginPageComponent,
-    MainPageComponent,
-    ErrorPageComponent
-  ],
+  declarations: [LoginPageComponent, MainPageComponent, ErrorPageComponent],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
     HttpClientModule,
-    TemplatesModule
+    TemplatesModule,
   ],
+  exports: [LoginPageComponent, MainPageComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true,
     },
-  ]
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}
